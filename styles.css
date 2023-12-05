@@ -7,6 +7,9 @@
     --color-5:#E8DED2;
     --color-6:#A3D2CA;
     --color-7:#5EAAA8;
+    --color-8:black;
+    --color-9:green;
+    --color-10:orange;
 }
 
 /*Styling The complete page*/
@@ -17,13 +20,18 @@ html{
 }
 
 body{
-    background:var(--color-6);  
+    background:var(--color-6); 
 }
 
 
-/*The Header container with icon, brand name and menu bar. Flex arrange all items horizontal*/
+/*The Header element with class name container with icon, brand name and menu bar. 
+Flex arrange all items horizontal. Its position is fixed at the top while occupying the entire width*/
+
 .container{
     display:flex;
+    position:fixed;    
+    top:0;
+    width:100%;
 }
 
 /*The div with icon and brand name. Flex arrange all items horizontally instead of vertically in blocks*/
@@ -46,19 +54,19 @@ body{
 
 
 
-/*Menu bar at the top. Margin-left: auto pushes the menu bar to the far right*/
-.menu-bar{
+/*Nav bar at the top. Margin-left: auto pushes the nav bar to the far right*/
+.navigation{
     margin-left:auto;
     padding:0px 10px 0px 0px;
 }
 
-.menu-bar li {
-    float:right;  /*Float take all list(menu) items from vertical to horizontal position*/
+#nav-bar li {
+    float:right;  /*Float take all list(nav) items from vertical to horizontal position*/
     margin:0px ;
 }
 
 /*Menu bar unordered list styling*/
-.menu-bar > nav > ul{
+div #nav-bar > ul{
     list-style-type: none;
     margin: 10px 20px 0px 0px;
     padding: 0;
@@ -67,7 +75,8 @@ body{
     border-radius: 20px;
 }
 
-.menu-bar li a {
+/*Styling the nav links in the nav bar*/
+#nav-bar li a {
 display: block;
 color: var(--color-3);
 text-align: center;
@@ -75,7 +84,8 @@ padding: 15px 20px;
 text-decoration: none;
 }
 
-.menu-bar li a:hover {
+/*Change color while hoovering on the nav bar*/
+#nav-bar li a:hover {
 background-color: var(--color-4);
 }
 
@@ -84,17 +94,262 @@ background-color: var(--color-4);
     margin-top:0px;
 }
 
+main{
+    margin-top:80px;
+}
 
-.section-slogan{
+
+/*   SECTION 1: SLOGAN   */
+
+/*Styling the slogan section*/
+#section-slogan{
     display:flex;
     justify-content: center;
-    padding-top:5px;
-    font-size:2rem;
+    padding:5px 0px 80px 0px;
     color: var(--color-2);
 }
 
+/*Words before the photo of the dancing man*/
+.slogan-before{
+    padding-top:5px;
+    font-size:1.5rem;
+    font-style: italic;
+}
+
+/*Words after the photo of the dancing man*/
+.slogan-after{
+    padding-top:60px;
+    font-size:1.5rem;
+    font-style: italic;
+}
+
+/*the circle around the photo of the dancing man*/
+.div-slogan-photo{
+    width: 150px;
+    height: 150px;
+    border:5px solid var(--color-5);
+    border-radius:50%;
+}
+
+/*the dancing man*/
 .slogan-photo{
     width:150px;
     height:150px;
 }
+
+/*  SECTION 2: FEATURES   */
+
+/*Styling div containing 4 other divs of features*/
+#section-features{
+    display:grid;
+}
+
+/*Styling div containing icons, heading and features explanation*/
+#section-features div{
+    display:grid;
+    margin-left:25%;
+    margin-bottom:30px;
+    width:50%;
+    justify-content: start;
+}
+
+#section-features div img{
+    width:40px;
+    height:40px;
+    padding:10px 30px 0px 0px;
+    margin-top:5px;
+    grid-row:1 / 3;
+    grid-column:1 / 2;
+    
+}
+
+#section-features div h3{
+    font-size:1.2rem;
+    margin-bottom: 0px;
+    grid-row:1 / 2;
+    grid-column:2 /3;
+    
+}
+
+#section-features div p{
+    padding:0px ;
+    margin-top:0px;
+    font-size:1rem;
+    grid-row:2 / 3;
+    grid-column:2 / 3;
+}
+
+
+/* SECTION 3: VIDEO SECTION */
+
+#video-section #video{
+    display:grid;
+    margin-left:25%;
+    margin-bottom:30px;
+    width:50%;
+    justify-content: start;
+}
+
+/* SECTION 4: PRICING SECTION */
+#pricing-section{
+    display:flex;
+    margin:50px 0px;
+    margin-left:12.5%;
+    width:75%;
+    justify-content: space-between;
+}
+
+#pricing-section .price-div{
+    display:grid;
+    margin:20px;
+    width:100%;
+    justify-items: center;
+    border:3px solid var(--color-1);
+    border-radius:7px;
+}
+
+.price-div h4{
+    font-size: 1.2rem;
+    width:100%;
+    text-align:center;
+    background-color: rgb(230, 230, 230);
+    padding-top:20px;
+    padding-bottom:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    height:50px;
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+}
+
+.price-div .price{
+    font-size: 3rem;
+    margin-top:10px;
+    margin-bottom:5px;
+}
+
+.price-div .product-image{
+    width:95%;
+    margin-top:0px;
+    border-radius:10px;
+}
+
+.price-div .specs li{
+    list-style-type:circle;
+}
+
+
+.select-button{
+    margin-bottom:20px;
+    border-radius:6px;
+    background-color:var(--color-9); 
+    border:none;
+    height:40px; 
+    width:100px;
+    font-size:1.2rem;
+}
+
+
+
+
+/* SECTION 5: LOGIN SECTION */
+#login-section #form{
+    display:grid;
+    margin-left:25%;
+    margin-bottom:30px;
+    width:50%;
+    justify-items: center;
+}
+
+#form > #email{
+    margin-left:25%;
+    width:75%;
+    height:40px;
+    border-radius:5px;
+    border:none;
+    margin-bottom:10px;
+    font-size:1rem;
+    text-align:left;
+    padding-left:20px;
+}
+
+placeholder{
+    margin:20px;
+}
+
+/*#form > #password{
+    margin-left:25%;
+    width:75%;
+    height:40px;
+    border-radius:5px;
+    border:none;
+    margin-bottom:10px;
+    font-size:1rem;
+    text-align:left;
+    padding-left:20px;
+}*/
+
+#form > #submit{
+    margin-left:25%;
+    width:30%;
+    height:40px;
+    border-radius:5px;
+    border:none;
+    margin-bottom:10px;
+    font-size:1rem;
+    text-align:center;
+    background-color:var(--color-10); 
+}
+
+/*FOOTER SECTION*/
+ #footer{
+    display:grid;
+    justify-content: right;
+    width:75%;
+    margin:0px;
+    margin-left:12.5%;
+    background-color:var(--color-2);
+    border-radius: 10px;
+    padding:0px 10px 0px 0px;
+ }
+
+ #footer li {
+    list-style: none;
+    float:right;  
+    margin:0px ;
+}
+
+#footer p {
+    align-items:right; 
+    margin:0px ;
+    text-align: right;
+    padding: 5px 10px;
+}
+
+ #footer li a {
+    display: block;
+    color: var(--color-3);
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+#footer li a:hover {
+    background-color: var(--color-4);
+}
+
+
+@media screen and (max-width:640px){
+    html{
+        font-size:20px;
+    }
+    body{
+        display:grid;
+        align-content:center;
+    }
+    .price-div{
+        display:grid;
+        align-items:center;
+    }
+}
+
 
