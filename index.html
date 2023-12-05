@@ -12,12 +12,12 @@
                 <img class="brand-icon" id="header-img" src="./Images and Videos/headset.png" rel="earphones icon">
                 <h1 class="brand-name">Sauti</h1>
             </div>
-            <div class="menu-bar">
+            <div class="navigation">
                 <nav id="nav-bar">
                     <ul>
-                        <li><a  class="nav-link" href="#">Contact us</a></li>
-                        <li><a  class="nav-link" href="#">Features</a></li>
-                        <li><a  class="nav-link" href="#">Products</a></li>
+                        <li><a  class="nav-link" href="#login-section">Login</a></li>
+                        <li><a  class="nav-link" href="#pricing-section">Pricing</a></li>
+                        <li><a  class="nav-link" href="#section-features">Features</a></li>
                     </ul>
                 </nav>
             </div>
@@ -26,27 +26,109 @@
         <main>
             <hr class="header-line"> 
             <!--Section-1: Brand Slogan and photo-->
-            <section class="section-slogan">
-                <p class="slogan">Sauti</p>
-                <img class="slogan-photo" src="./Images and Videos/listening.png" rel="dancing with earphones">
-                <p class="slogan">Elevate your mood!</p>
+            <section id="section-slogan">
+                <p class="slogan-before">Best sound!</p>
+                <div class="div-slogan-photo">
+                    <img class="slogan-photo" src="./Images and Videos/listening.png" rel="dancing with earphones"> 
+                </div>
+                <p class="slogan-after">Boost your mood!</p>
             </section>
 
             <!--Section-2: Features of and our services-->
-            <section class="section-features">
+            <section>
+                <div id="section-features">
+                    <div class="best-sound">
+                        <img src="./Images and Videos/speaker.png" rel="sound icon">
+                        <h3>Deep Bass Sound</h3>
+                        <p>Get the most from your mixes with high-quality audio.</p>
+                    </div>
+                    <div class="fast-delivery">
+                        <img src="./Images and Videos/fast-delivery.png" rel="fast-delivery icon">
+                        <h3>Fast Delivery</h3>
+                        <p>Your products are shipped within 24 hours after the order is received.</p>
+                    </div>
+                    <div class="quality">
+                        <img src="./Images and Videos/standard.png" rel="quality icon">
+                        <h3>Premium quality</h3>
+                        <p>The products are made of the high quality materials available in the market.</p>
+                    </div>
+                    <div class="money-back">
+                        <img src="./Images and Videos/money-back-guarantee.png" rel="money-back icon">
+                        <h3>Money Back Guarantee</h3>
+                        <p>Enjoy two years manufacturer's guarantee. If you are not happy with the product, 
+                            feel free to return it within 30 days and get full refund. No questions asked.
+                        </p>
+                    </div>
+                </div>
             </section>
 
             <!--Section-3: Video sample of earphones-->
-            <section class="main-section">
+            <section id="video-section">
+                <video id="video" controls width="500" height="400" loop >
+                    <source src="./Images and Videos/JBL Makes Earbuds (for Every-One) ｜ True Wireless.mp4" type="video/mp4"/>
+                </video>
             </section>
 
-            <!--Section-4: Contact section with email-->
-            <section class="main-section">
+            <!--Section-4: Pricing Section-->
+            <section id="pricing-section">
+                <div class="price-div">
+                    <h4>JBL Tune 230NC TWS</h4>
+                    <p class="price">$119.95</p>
+                    <img class="product-image" src="./Images and Videos/Model-1-JBL Tune 230NC TWS.png" rel="JBL Tune 230NC TWS">
+                    <ul class="specs">
+                        <li>Maximum play time 40 hours</li>
+                        <li>Active Noise Cancelling</li>
+                        <li>True Adaptive Noise Cancelling</li>
+                        <li>JBL Pure Bass Sound</li>
+                    </ul>
+                    
+                    <button class="select-button">Select</button>
+                </div>
+                <div class="price-div">
+                    <h4>JBL Endurance Peak 3</h4>
+                    <p class="price">$99.95</p>
+                    <img class="product-image" src="./Images and Videos/Model-2-JBL Endurance Peak 3.png" rel="JBL Endurance Peak 3">
+                    <ul class="specs">
+                        <li>Maximum play time 50 hours</li>
+                        <li>Water proof</li>
+                        <li>JBL Pure Bass Sound</li>
+                        <li>Ambient Aware</li>
+                    </ul>
+                    <button class="select-button">Select</button>
+                </div>
+                <div class="price-div">
+                    <h4>JBL Live Pro 2 TWS</h4>
+                    <p class="price">$149.95</p>
+                    <img class="product-image" src="./Images and Videos/Model-3-JBL Live Pro 2 TWS.png" rel="JBL Live Pro 2 TWS">
+                    <ul class="specs">
+                        <li>Maximum play time 40 hours</li>
+                        <li>Active Noise Cancelling</li>
+                        <li>True Adaptive Noise Cancelling</li>
+                        <li>JBL Pure Bass Sound</li>
+                        <li>Multi-Point Connection</li>
+                    </ul>
+                    <button class="select-button" type="button">Select</button>
+                </div>
+            </section>
+
+
+            <!--Section-5: Login section with email-->
+            <section id="login-section">
+                <form id="form" action="https://www.freecodecamp.com/email-submit"  method="get">
+                    <input type="email" id="email" name="email" placeholder="Enter your email to proceed.."/>
+                    <!-- <input type="password" id="password" placeholder="Enter your password"/>  -->
+                    <input type="submit" id="submit" value="Login"/>
+                </form>
             </section>
         </main>
 
-        <footer>
-
+        <footer id="footer">
+                <ul>
+                    <li><a  class="nav-link" href="#login-section">Contact Us</a></li>
+                    <li><a  class="nav-link" href="#section-slogan">Privacy</a></li>
+                    <li><a  class="nav-link" href="#section-features">Terms</a></li>
+                </ul>
+            <p>Copyright 2023 © Sauti</p>
         </footer>
     </body>
 </html>
