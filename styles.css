@@ -1,0 +1,100 @@
+/*Colors used in the project*/
+:root{
+    --color-1:#7071E8;
+    --color-2:rgb(61, 123, 176);
+    --color-3:white;
+    --color-4:rgb(6, 38, 108);
+    --color-5:#E8DED2;
+    --color-6:#A3D2CA;
+    --color-7:#5EAAA8;
+}
+
+/*Styling The complete page*/
+html{
+    font-family:Helvetica, sans-serif;
+    font-size:15px;
+    width:100vw;
+}
+
+body{
+    background:var(--color-6);  
+}
+
+
+/*The Header container with icon, brand name and menu bar. Flex arrange all items horizontal*/
+.container{
+    display:flex;
+}
+
+/*The div with icon and brand name. Flex arrange all items horizontally instead of vertically in blocks*/
+.brand-icon-and-name{
+    display:flex;
+}
+
+/*icon and brand-name resizing and positioning*/
+.brand-icon{
+    width:50px;
+    height:50px;
+    padding:10px 0px 0px 10px;
+}
+
+.brand-name{
+    color:var(--color-1);
+    padding:5px 0px 0px 5px;
+}
+
+
+
+
+/*Menu bar at the top. Margin-left: auto pushes the menu bar to the far right*/
+.menu-bar{
+    margin-left:auto;
+    padding:0px 10px 0px 0px;
+}
+
+.menu-bar li {
+    float:right;  /*Float take all list(menu) items from vertical to horizontal position*/
+    margin:0px ;
+}
+
+/*Menu bar unordered list styling*/
+.menu-bar > nav > ul{
+    list-style-type: none;
+    margin: 10px 20px 0px 0px;
+    padding: 0;
+    overflow: hidden;
+    background-color:var(--color-2);
+    border-radius: 20px;
+}
+
+.menu-bar li a {
+display: block;
+color: var(--color-3);
+text-align: center;
+padding: 15px 20px;
+text-decoration: none;
+}
+
+.menu-bar li a:hover {
+background-color: var(--color-4);
+}
+
+/*Header line*/
+.header-line{
+    margin-top:0px;
+}
+
+
+.section-slogan{
+    display:flex;
+    justify-content: center;
+    padding-top:5px;
+    font-size:2rem;
+    color: var(--color-2);
+}
+
+.slogan-photo{
+    width:150px;
+    height:150px;
+}
+
